@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px; 
+    gap: 2rem;
+    overflow-x: auto; 
+}
+
+.card-back {
+    background-color: black; 
+    backface-visibility: hidden;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: rotateY(-180deg);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.card {
+    flex: 0 1 350px;
+    aspect-ratio: 50/75;
+    margin-top: 150px;
+    margin-left: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    &:hover {
+        & > .card-front {
+            transform: rotateY(180deg);
+        }
+
+        & > .card-back {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+    }
+}
+
+.card-front,
+.card-back {
+    aspect-ratio: inherit;
+    transition: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    inset: 0;
+    position: absolute;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.images{
+    height: 100%; /* Adjust the height as per your requirement */
+}
+
+.card-front {
+    z-index: 2;
+
+    & > img {
+        max-width: 100%;
+    }
+}
+
+.card-back {
+    backface-visibility: hidden;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: rotateY(-180deg);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex-basis: calc(100% - 20px); 
+    }
+}
+
+.box-img-1{
+    height: 100%;
+    background-size: cover;
+}

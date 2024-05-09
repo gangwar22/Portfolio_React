@@ -1,0 +1,43 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  margin-top: 40vh;
+  margin-left: 5vw;
+  animation: fadeInFromLeft 1s ease forwards;
+}
+
+.home {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .heading {
+    height: auto;
+    margin-top: 20vh;
+    margin-left: 2vw;
+    font-size: 1.5rem;
+  }
+
+  .home {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

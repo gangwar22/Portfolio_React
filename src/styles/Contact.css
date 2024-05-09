@@ -1,0 +1,142 @@
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 5% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-color: rgb(3, 3, 57);
+  margin-top: 50px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 5%;
+}
+
+.container .contactInfo,
+.container .contactForm {
+  width: 100%;
+  padding: 5%; 
+}
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    padding: 5% 10%; 
+  }
+  .container {
+    margin-top: 5%; 
+  }
+  .container .contactInfo,
+  .container .contactForm {
+    width: 40%; 
+    padding: 2%; 
+  }
+}
+
+.contactForm {
+  width: 40%;
+  padding: 5%; 
+  background: #fff;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contactForm h2 {
+  font-size: 1.875rem; 
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5vh;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 0.3125rem 0; 
+  font-size: 1rem;
+  margin: 0.625rem 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 0.3125rem 0;
+  font-size: 1rem;
+  margin: 0.625rem 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 0.75rem; 
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 6.25rem;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.625rem; 
+  font-size: 1.125rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.container,
+.content {
+  color: white;
+}
+
+.content {
+  width: 60vw;
+}
+
+.content h3,
+.content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.icon {
+  margin-right: 0rem; 
+  width: 1.875rem; 
+  margin-top: 1rem;
+}
+
+.contactInfo {
+  margin-right: 9vw;
+}
+
+.text {
+  margin-left: 3vw;
+  margin-bottom: 5vh;
+}
+
+.box{
+  display: flex;
+}
